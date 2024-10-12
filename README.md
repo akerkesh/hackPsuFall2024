@@ -1,3 +1,7 @@
+# Notes Sync & AI Quiz Generator
+
+Welcome to the **Notes Sync & AI Quiz Generator** project! This web application provides an intuitive platform for users to store, organize, and access notes across multiple devices (computer and phone). With the added power of AI, you can automatically generate notes and personalized quizzes to enhance your learning experience.
+
 ## Features
 
 - **Sync Across Devices**  
