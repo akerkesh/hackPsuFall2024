@@ -1,0 +1,3 @@
+Flask
+pymongo
+dnspython  # Helps with MongoDB connection to Atlas
