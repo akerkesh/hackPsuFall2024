@@ -1,12 +1,16 @@
 # app/routes.py
 from flask import Blueprint, request, jsonify
-from app.models import insert_note, get_notes_by_user, delete_note_by_id
+from flask import Blueprint, request, jsonify, render_template
 from bson import ObjectId  # To work with MongoDB ObjectIds
 
 main = Blueprint('main', __name__)
 
+@main.route('/')
+def home():
+    return "Welcome to the Notes App!"
+
+    return render_template('index.html')
 @main.route('/notes', methods=['POST'])
-def create_note():
     data = request.json
     user_id = data.get('user_id')
     title = data.get('title')
