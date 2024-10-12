@@ -1,4 +1,4 @@
-#!/Users/nyikawachira/hackPsuFall2024/.venv/bin/python
+#!/Users/nyikawachira/hackPsuFall2024/.venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

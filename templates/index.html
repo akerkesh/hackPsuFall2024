@@ -12,6 +12,10 @@
     <form id="noteForm">
         <textarea id="noteText" placeholder="Write your note here..." required></textarea><br>
         <button type="submit">Save Note</button>
+    <form method="POST" action="{{ url_for('main.home') }}">
+        {{ form.hidden_tag() }}
+        {{ form.note.label }} {{ form.note(size=32) }}
+        {{ form.submit() }}
     </form>
     <div id="notesList">
         <!-- User's notes will be displayed here -->
