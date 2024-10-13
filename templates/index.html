@@ -5,8 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/style.css">
     <title>Quackademic Notes</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .left-column {
+            width: 20%; 
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+
+        .left-column ul {
+            font-size: 16px; 
+        }
+
+        .right-column {
+            width: 80%; 
+            padding: 10px;
+            margin-top: 100px;
+        }
+
+        #suggestions,
+        #folder-structure,
+        #note-list {
+            background-color: white; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            padding: 10px; 
+            margin-bottom: 20px; 
+            width: 100%; 
+        }
+
+        h1 {
+            margin: 0 0 20px; 
+            text-align: center; 
+            font-size: 40px;
+        }
+
+        #suggestions {
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+
+        #noteContainer {
+            text-align: center;
+            margin: 20px auto; 
+        }
+
+        #noteText {
+            width: 100%; 
+            max-width: 800px; 
+            height: 200px;
+            font-size: 18px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            margin-bottom: 10px; 
+        }
+
+        #folderName {
+            font-size: 14px; 
+            width: 100%; 
+            max-width: 400px;
+            margin: 10px auto; 
+            padding: 5px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            display: block; 
+        }
+
+        #buttonContainer {
+            display: flex; 
+            justify-content: center; 
+            margin-top: 10px; 
+        }
+
+        button {
+            margin: 0 5px; 
+            padding: 10px 15px; 
+            font-size: 16px; 
+        }
+    </style>
 </head>
 <body>
+<<<<<<< HEAD
 
     <!-- Fixed Sidebar -->
     <div class="sidenav">
@@ -36,6 +120,54 @@
                 <button id="quizButton">Generate Quiz</button>
             </div>
         </form>
+=======
+    <div class="container">
+        <div class="left-column">
+            <h1>Quackademic Notes</h1>
+
+            <div id="suggestions">
+                <h3>AI Suggestions</h3>
+                <ul id="suggestionsList">
+                    <!-- AI-generated suggestions will appear here -->
+                </ul>
+            </div>
+
+            <div id="folder-structure">
+                <h3>Folders</h3>
+                <ul id="folderList">
+                    <!-- Folder structure will be displayed here -->
+                </ul>
+            </div>
+
+            <section id="note-list">
+                <h3>Your Notes</h3>
+                <div id="notesList">
+                    <!-- User's notes will be displayed here -->
+                </div>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <form id="noteForm">
+                <div id="noteContainer">
+                    <textarea id="noteText" placeholder="Write your note here..." required></textarea><br>
+                    <input type="text" id="folderName" placeholder="Folder name (optional)">
+                    <div id="buttonContainer">
+                        <button type="submit">Save Note</button>
+                        <button id="syncButton">Sync Notes</button>
+                        <button id="quizButton">Generate Quiz</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="quizArea" style="display: none;">
+                <h3>Generated Quiz</h3>
+                <div id="quizContent">
+                    <!-- Generated quiz will appear here -->
+                </div>
+            </div>
+        </div>
+>>>>>>> refs/remotes/origin/main
     </div>
 
     <script src="../static/js/app.js"></script>
