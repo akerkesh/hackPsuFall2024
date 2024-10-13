@@ -1,26 +1,32 @@
-<!-- Frontend Team: Work on the design and structure here -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css">
-    <title>Notes App</title>
+    <title>Quackademic Notes</title>
 </head>
 <body>
     <h1>Quackademic Notes</h1>
+    <div id="folder-structure">
+        <!-- Folder structure will be displayed here -->
+    </div>
     <form id="noteForm">
         <textarea id="noteText" placeholder="Write your note here..." required></textarea><br>
+        <input type="text" id="folderName" placeholder="Folder name (optional)">
         <button type="submit">Save Note</button>
-    <form method="POST" action="{{ url_for('main.home') }}">
-        {{ form.hidden_tag() }}
-        {{ form.note.label }} {{ form.note(size=32) }}
-        {{ form.submit() }}
     </form>
+    <button id="syncButton">Sync Notes</button>
+    <button id="quizButton">Generate Quiz</button>
+    <div id="suggestions">
+        <!-- AI-generated suggestions will appear here -->
+    </div>
     <div id="notesList">
         <!-- User's notes will be displayed here -->
     </div>
-
+    <div id="quizArea" style="display: none;">
+        <!-- Generated quiz will appear here -->
+    </div>
     <script src="/static/js/app.js"></script>
 </body>
 </html>

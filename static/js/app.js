@@ -1,8 +1,8 @@
-// Backend Team: Handle logic for saving notes via AJAX and fetching saved notes
-
+let notes = {};
 document.getElementById('noteForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const noteText = document.getElementById('noteText').value;
+    const folderName = document.getElementById('folderName').value || 'Uncategorized';
 
     try {
         const response = await fetch('/save-note', {
@@ -10,12 +10,14 @@ document.getElementById('noteForm').addEventListener('submit', async (e) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ note: noteText }),
+            body: JSON.stringify({ note: noteText, folder: folderName }),
         });
 
         if (response.ok) {
-            document.getElementById('noteText').value = ''; // Clear input field
-            loadNotes();  // Reload notes list
+            document.getElementById('noteText').value = '';
+            document.getElementById('folderName').value = '';
+            loadNotes();
+            loadSuggestions();
         }
     } catch (err) {
         console.error('Error saving note:', err);
@@ -33,4 +35,18 @@ async function loadNotes() {
     }
 }
 
-window.onload = loadNotes;  // Load notes when the page loads
+async function loadSuggestions() {
+    try {
+        const response = await fetch('/get-suggestions');
+        const data = await response.json();
+        const suggestionsDiv = document.getElementById('suggestions');
+        suggestionsDiv.innerHTML = `<h3>Suggested Topics:</h3><p>${data.suggestions}</p>`;
+    } catch (err) {
+        console.error('Error fetching suggestions:', err);
+    }
+}
+
+window.onload = () => {
+    loadNotes();  // Load notes when the page loads
+    loadSuggestions(); // Load initial suggestions
+};
