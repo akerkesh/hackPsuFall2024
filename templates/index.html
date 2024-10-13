@@ -7,44 +7,35 @@
     <title>Quackademic Notes</title>
 </head>
 <body>
-    <h1>Quackademic Notes</h1>
-    
-    <form id="noteForm">
-        <textarea id="noteText" placeholder="Write your note here..." required></textarea><br>
-        <input type="text" id="folderName" placeholder="Folder name (optional)">
-        <div id="buttonContainer">
-            <button type="submit">Save Note</button>
-            <button id="syncButton">Sync Notes</button>
-            <button id="quizButton">Generate Quiz</button>
-        </div>
-    </form>
 
-    <div id="suggestions">
-        <h3>AI Suggestions</h3>
+    <!-- Fixed Sidebar -->
+    <div class="sidenav">
+				<h1>Quackademic Notes</h1>
+        <h2>AI Suggestions</h2>
         <ul id="suggestionsList">
             <!-- AI-generated suggestions will appear here -->
         </ul>
-    </div>
-
-    <div id="folder-structure">
+        <h2>Your Notes</h2>
+        <ul id="notesList">
+            <!-- User's notes will be displayed here -->
+        </ul>
         <h2>Folders</h2>
         <ul id="folderList">
             <!-- Folder structure will be displayed here -->
         </ul>
     </div>
 
-    <section id="note-list">
-        <h2>Your Notes</h2>
-        <div id="notesList">
-            <!-- User's notes will be displayed here -->
-        </div>
-    </section>
-
-    <div id="quizArea" style="display: none;">
-        <h3>Generated Quiz</h3>
-        <div id="quizContent">
-            <!-- Generated quiz will appear here -->
-        </div>
+    <!-- Main content -->
+    <div class="main">
+        <form id="noteForm">
+            <input type="text" id="folderName" placeholder="Folder name (optional)">
+            <textarea id="noteText" placeholder="Write your note here..." required></textarea>
+            <div id="buttonContainer">
+                <button type="submit">Save Note</button>
+                <button id="syncButton">Sync Notes</button>
+                <button id="quizButton">Generate Quiz</button>
+            </div>
+        </form>
     </div>
 
     <script src="../static/js/app.js"></script>

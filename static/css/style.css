@@ -1,23 +1,75 @@
-/* Frontend Team: Style the page here */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+/* Fixed sidebar style */
+.sidenav {
+    height: 100%;
+    width: 300px; /* Adjust width for the sidebar */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1E1E1E; /* Dark background */
+    padding-top: 10px;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Sidebar headers and list styles */
+.sidenav h1 {
+    color: yellow;
+}
+
+.sidenav h2 {
+    background-color: #333; /* Dark grey box background for headers */
+    color: #f1f1f1; /* Text color */
+    padding: 15px 20px; /* Padding inside the box */
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Make sure it takes the full width of the sidebar */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    border-bottom: 1px solid #444; /* Optional: border for separation */
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding-left: 16px;
+    margin: 10px 0;
+}
+
+.sidenav ul li {
+    padding: 10px 0;
+    color: #818181;
+}
+
+.sidenav ul li:hover {
+    color: #f1f1f1;
+}
+
+/* Main content style */
+.main {
+    margin-left: 260px; /* Same as the width of the sidebar */
     padding: 20px;
-    background-color: #f9f9f9;
 }
 
 h1 {
     color: #333;
+    text-align: center;
 }
 
 #noteForm {
-    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
-textarea {
+input[type="text"], textarea {
     width: 100%;
-    height: 100px;
     padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 button {
@@ -26,84 +78,9 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049; /* Original hover color */
-}
-
-#buttonContainer {
-    display: flex;
-    gap: 15px; /* Space between buttons */
-    margin-top: 10px; /* Optional space above the button container */
-}
-
-#folder-structure, 
-#suggestions, 
-#note-list, 
-#quizArea {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff; /* White background for contrast */
-}
-
-#folderList, 
-#suggestionsList {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-}
-
-#folderList li, 
-#suggestionsList li {
-    padding: 8px;
-    border-bottom: 1px solid #eee; /* Add a bottom border for separation */
-}
-
-#folderList li:last-child, 
-#suggestionsList li:last-child {
-    border-bottom: none; /* Remove bottom border from the last item */
-}
-
-input[type="text"] {
-    width: 100%; /* Full width */
-    padding: 10px;
-    margin-top: 10px; /* Space above the input field */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="text"]:focus {
-    border-color: #4CAF50; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow on focus */
-}
-
-#notesList {
-    margin-top: 20px;
-}
-
-#quizArea {
-    display: none; /* Hidden by default, shown via JS when needed */
-}
-
-@media (max-width: 600px) {
-    textarea {
-        height: 80px; /* Reduce height on smaller screens */
-    }
-    
-    button {
-        width: 100%; /* Make buttons full-width on smaller screens */
-    }
-}
-
-#folderList li:hover, 
-#suggestionsList li:hover {
-    background-color: #f1f1f1; /* Light grey background on hover */
-}
-
-h2, h3 {
-    color: #444; /* Slightly darker for subheadings */
+    background-color: #45a049;
 }
