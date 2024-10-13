@@ -2,6 +2,12 @@
 
 Welcome to the **Quackademic Notes** project! This web application provides an intuitive platform for users to store, organize, and access notes locally on their device. With the added power of AI, you can automatically generate notes and personalized quizzes to enhance your learning experience.
 
+## Current User Interface
+
+![Quackademic Notes User Interface](./images/Quackademic%20Notes%20FrondEnd.jpg)
+
+The Current User Interface
+
 ## Features
 
 - **Local Storage**  
