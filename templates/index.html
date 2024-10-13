@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+=======
+<!-- Frontend Team: Work on the design and structure here -->
+>>>>>>> b8fd680d50c377cc2947af9199933fff53051b7f
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css">
+<<<<<<< HEAD
     <title>Quackademic Notes</title>
 </head>
 <body>
@@ -27,6 +32,24 @@
     <div id="quizArea" style="display: none;">
         <!-- Generated quiz will appear here -->
     </div>
+=======
+    <title>Notes App</title>
+</head>
+<body>
+    <h1>Quackademic Notes</h1>
+    <form id="noteForm">
+        <textarea id="noteText" placeholder="Write your note here..." required></textarea><br>
+        <button type="submit">Save Note</button>
+    <form method="POST" action="{{ url_for('main.home') }}">
+        {{ form.hidden_tag() }}
+        {{ form.note.label }} {{ form.note(size=32) }}
+        {{ form.submit() }}
+    </form>
+    <div id="notesList">
+        <!-- User's notes will be displayed here -->
+    </div>
+
+>>>>>>> b8fd680d50c377cc2947af9199933fff53051b7f
     <script src="/static/js/app.js"></script>
 </body>
 </html>
