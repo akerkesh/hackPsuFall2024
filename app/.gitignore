@@ -1,1 +1,41 @@
+# .gitignore
+
+# Ignore .env file containing sensitive information
 .env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Flask
+instance/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Log files
+*.log
+
+# Database
+*.db
+*.sqlite3
+
+# Other
+*.bak
+*.swp
+*.swo
