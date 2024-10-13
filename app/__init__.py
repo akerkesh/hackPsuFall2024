@@ -3,6 +3,9 @@ from flask import Flask
 from flask_pymongo import PyMongo
 from flask_wtf.csrf import CSRFProtect
 from config import Config
+from dotenv import load_dotenv
+
+load_dotenv()
 
 mongo = None
 
