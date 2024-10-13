@@ -4,7 +4,7 @@ Welcome to the **Quackademic Notes** project! This web application provides an i
 
 ## Current User Interface
 
-![Quackademic Notes User Interface](https://your-image-url-here.com/image.png)
+![Quackademic Notes User Interface](https://file:///Users/nyikawachira/Downloads/Quackademic%20Notes%20FrondEnd.jpg/image.png)
 
 The Current User Interface
 
