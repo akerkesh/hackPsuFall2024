@@ -34,3 +34,29 @@ The Current User Interface
 ## Local Setup
 
 1. Clone the repository
+
+git clone [repository-url] cd [repository-name]
+
+3. Set up a virtual environment (optional but recommended):
+
+python -m venv venv source venv/bin/activate # On Windows use venv\Scripts\activate
+
+4. Install the required dependencies:
+
+pip install -r requirements.txt
+
+5. Set up environment variables:
+Create a `.env` file in the root directory and add:
+SECRET_KEY=your_secret_key_here
+
+
+6. Run the application:
+  
+python run.py
+
+
+9. Open your web browser and navigate to `http://127.0.0.1:5000/`
+
+10. You can now use the application to create, view, and organize your notes.
+
+Note: Make sure you have Python installed on your system before starting these steps.
